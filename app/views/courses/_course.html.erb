@@ -1,0 +1,28 @@
+<table class="course-card" border="1" width="100%">
+  <tr>
+    <th>&nbsp;</th>
+  <% @course.holes.each do |hole| %>
+    <th><%=h hole.position %></th>
+  <% end%>
+  </tr>
+  <tr>
+    <td>Par</td>
+  <% @course.holes.each do |hole| %>
+    <td><%=h hole.par %></td>
+  <% end%>
+  </tr>
+  <tr>
+    <td>HCP</td>
+  <% @course.holes.each do |hole| %>
+    <td><%=h hole.handicap %></td>
+  <% end%>
+  </tr>
+  <% %w{ black white yellow blue red }.each do |color| %>
+    <tr class="<%= color %>">
+      <td>
+    <% @course.holes.each do |hole| %>
+      <td><%=h hole.info(color).distance %></td>
+    <% end%>
+    </tr>
+  <% end %>
+</table>
