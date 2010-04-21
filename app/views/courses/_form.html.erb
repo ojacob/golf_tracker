@@ -18,6 +18,9 @@
       <th>Number</th>
       <th>Handicap</th>
       <th>Par</th>
+      <% %w{ black white yellow blue red }.each do |color| %>
+      <th><%= color.capitalize %></th>
+      <% end %>
     </tr>
     <% f.fields_for :holes do |builder| %>
       <%= render "course_hole", :f => builder %>
