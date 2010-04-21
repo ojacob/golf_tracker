@@ -1,0 +1,32 @@
+<div id="course-summary">
+<p>
+  <b>Name:</b>
+  <%=h @course.name %>
+</p>
+<p>
+  <b>Par:</b>
+  <%=h @course.par%>
+</p>
+<p>
+  <b>Description:</b>
+  <%=h @course.description %>
+</p>
+</div>
+
+<div id="course-card">
+  <table class="course-card" border="1" width="100%">
+    <tr>
+    <% @course.holes.each do |hole| %>
+      <th><%=h hole.position %></th>
+    <% end%>
+    </tr>
+    <tr>
+    <% @course.holes.each do |hole| %>
+      <td><%=h hole.par %></td>
+    <% end%>
+    </tr>
+  </table>
+</div>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

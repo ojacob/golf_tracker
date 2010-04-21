@@ -1,0 +1,29 @@
+<% form_for(@course) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :par %><br />
+    <%= f.text_field :par, :size => 2, :maxsize => 2 %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <table class="course-card" border="1">
+    <tr>
+      <th>Number</th>
+      <th>Handicap</th>
+      <th>Par</th>
+    </tr>
+    <% f.fields_for :holes do |builder| %>
+      <%= render "course_hole", :f => builder %>
+    <% end %>
+  </table>
+  <p>
+    <%= f.submit @course.new_record? ? 'Create' : 'Save' %>
+  </p>
+<% end %>
