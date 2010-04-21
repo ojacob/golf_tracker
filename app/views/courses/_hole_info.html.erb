@@ -1,4 +1,4 @@
-<td>
+<td class="<%= "hole-info #{f.object.color.downcase}" %>">
   <%= f.hidden_field :color %>
   <%= f.text_field :distance, :id => "hole_#{pos}_info_#{f.object.color}", :size => 5 %>
 </td>

@@ -1,3 +1,9 @@
+Factory.define :hole_information do |hi|
+  hi.color "black"
+  hi.distance 412
+  hi.difficulty 1
+end
+
 Factory.define :hole do |h|
   h.position 1
   h.par 3

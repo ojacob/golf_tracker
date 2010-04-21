@@ -13,13 +13,13 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </p>
-  <table class="course-card" border="1">
+  <table class="course-card">
     <tr>
       <th>Number</th>
-      <th>Handicap</th>
+      <th>HCP</th>
       <th>Par</th>
       <% %w{ black white yellow blue red }.each do |color| %>
-      <th><%= color.capitalize %></th>
+      <th class="<%= color %>"></th>
       <% end %>
     </tr>
     <% f.fields_for :holes do |builder| %>

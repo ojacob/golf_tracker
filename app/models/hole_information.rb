@@ -13,4 +13,6 @@
 
 class HoleInformation < ActiveRecord::Base
   belongs_to :hole
+  
+  validates_inclusion_of :color, :in => %w{ black white yellow blue red }
 end

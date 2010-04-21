@@ -14,18 +14,7 @@
 </div>
 
 <div id="course-card">
-  <table class="course-card" border="1" width="100%">
-    <tr>
-    <% @course.holes.each do |hole| %>
-      <th><%=h hole.position %></th>
-    <% end%>
-    </tr>
-    <tr>
-    <% @course.holes.each do |hole| %>
-      <td><%=h hole.par %></td>
-    <% end%>
-    </tr>
-  </table>
+  <%= render :partial => "course", :object => @course %>
 </div>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |

@@ -1,0 +1,41 @@
+.course-card {
+	
+}
+
+.hole-positions {
+	text-align: center;
+}
+
+.hole-positions > * > input[type=text]
+
+.hole-handicap-cell {
+	
+}
+
+.hole-par-cell {
+	
+}
+
+.hole-info {
+	
+}
+
+.black {
+	background-color: #666;
+}
+
+.white {
+	background-color: #fff;
+}
+
+.yellow {
+	background-color: #f2f22a;
+}
+
+.blue {
+	background-color: #362bc7;
+}
+
+.red {
+	background-color: #ef0d33;
+}
