@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100419201027
+# Schema version: 20100422143334
 #
 # Table name: hole_informations
 #
@@ -7,6 +7,7 @@
 #  color      :string(255)
 #  distance   :integer
 #  hole_id    :integer
+#  difficulty :integer
 #  created_at :datetime
 #  updated_at :datetime
 #
