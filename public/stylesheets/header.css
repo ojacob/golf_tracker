@@ -1,0 +1,117 @@
+#mygt-header {
+	display: inline-block;
+	background-color: #003300;
+	border: 0;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: #23523e;
+	font-family: arial,helvetica,sans-serif;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	min-width: 100%;
+	height: 91px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	vertical-align: baseline;
+}
+
+#mygt-header div, #mygt-header h5, #mygt-header ul, #mygt-header li, #mygt-header a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: arial,helvetica,sans-serif;
+  vertical-align: baseline;	
+}
+
+#mygt-header #mygt-logo {
+	float: left;
+	margin: 20px 0 15px 25px;
+}
+
+#mygt-header #mygt-logo a {
+	background-image: url(http://nav.heroku.com/images/logos/logo.png);
+	background-repeat: no-repeat;
+	display: block;
+	height: 56px;
+	overflow: hidden;
+	text-indent: -9999pw;
+	width: 117px;
+}
+
+#mygt-header ul#mygt-account-nav {
+	background-color: #006600;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-right: 25px;
+	margin-left: 10px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#mygt-header ul#mygt-account-nav, #mygt-header ul#mygt-section-nav {
+	display: inline-block;
+  float: right;
+  list-style-type: none;
+  margin-top: 30px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#mygt-header ul#mygt-account-nav li:first-child, #mygt-header ul#mygt-section-nav li:first-child {
+	border-left: none;
+	padding-left: none;
+	margin-left: 0;
+}
+
+#mygt-header ul#mygt-account-nav li, #mygt-header ul#mygt-section-nav li {
+	float: left;
+	margin-left: 10px;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: #23523e;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+#mygt-header ul#mygt-section-nav li a, #mygt-header ul#mygt-account-nav li a {
+	text-decoration: none;
+  font-weight: normal;
+}
+
+#mygt-header ul#mygt-section-nav li a {
+  color: #d8f0e6;
+}
+
+#mygt-header ul#mygt-section-nav li a:hover {
+  color: #fff;
+}
+
+#mygt-header ul#mygt-section-nav li a.active {
+  color: #bff740;
+}
+
+#mygt-header ul#mygt-section-nav li a.active:hover {
+  color: #bff740;
+}
+
+#mygt-header ul#mygt-account-nav li a {
+	color: #00bb00;
+}
+
+#mygt-header ul#mygt-account-nav li a:hover {
+	color: #00ff00;
+}
+
+#mygt-header ul#mygt-account-nav li a.active {
+	color: #bff740;
+}
+
+#mygt-header ul#mygt-account-nav li a.active:hover {
+	color: #bff740;
+}
+

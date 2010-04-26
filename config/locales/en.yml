@@ -7,3 +7,11 @@ en:
     create: Create
     save: Save
     show: View details
+  menu:
+    pricing: Pricing
+    links: Links
+    faq: FAQ
+    myrounds: My rounds
+    mystats: My stats
+    myaccount: My account
+    logout: Logout

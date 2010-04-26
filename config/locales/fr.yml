@@ -4,3 +4,11 @@ fr:
     create: Créer
     save: Enregistrer
     show: Détails
+  menu:
+    pricing: Tarifs
+    links: Liens
+    faq: FAQ
+    myrounds: Mes parcours
+    mystats: Mes stats
+    myaccount: Mon profil
+    logout: Deconnexion

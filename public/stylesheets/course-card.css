@@ -6,18 +6,20 @@
 	text-align: center;
 }
 
-.hole-positions > * > input[type=text]
+.hole-positions > * > input[type=text] {
+	
+}
 
 .hole-handicap-cell {
-	
+	text-align: center;
 }
 
 .hole-par-cell {
-	
+	text-align: center;
 }
 
 .hole-info {
-	
+	text-align: center;
 }
 
 .black {

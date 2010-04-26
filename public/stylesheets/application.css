@@ -1,15 +1,15 @@
 body {
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	border: 0 none;
 }
 
-a img {
-  border: none;
-}
-
-a {
-  color: #0000FF;
+body h1, h2, h3, h4, h5 {
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 4px;
 }
 
 .clear {
@@ -18,28 +18,36 @@ a {
   overflow: hidden;
 }
 
-#container {
-  width: 75%;
+#content {
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
   background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
 }
 
-#flash_notice, #flash_error {
-  padding: 5px 8px;
-  margin: 10px 0;
+.notice {
+	-webkit-box-shadow: #1d1d1d 2px 2px 2px;
+	-moz-box-shadow: 2px 2px 2px #1d1d1d;
+	background-image: url(../images/bkg-alert.png);
+	background-position: center bottom;
+	background-repeat: repeat-x;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	color: #fff;
+	padding: 5px 10px 10px;
 }
 
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
+.notice h3 {
+  line-height: 30px;
+  background-image: url(../images/icon-alert.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  padding-left: 40px;
 }
 
-#flash_error {
-  background-color: #FCC;
-  border: solid 1px #C66;
+.error {
+	background-color: #a11c39;
 }
 
 .fieldWithErrors {
