@@ -1,0 +1,14 @@
+en:
+  par: Par
+  handicap:
+    short: HCP
+    long: Handicap
+  courses:
+    list: Parcours connus
+    name: Nom
+    description: Description
+    identification: Fiche du parcours
+    card:
+      title: Carte de score
+  holes:
+    number: Numéro

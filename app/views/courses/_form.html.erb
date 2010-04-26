@@ -2,22 +2,22 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name, t('courses.name') %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :par %><br />
+    <%= f.label :par, t('par') %><br />
     <%= f.text_field :par, :size => 2, :maxsize => 2 %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, t('courses.description') %><br />
     <%= f.text_field :description %>
   </p>
   <table class="course-card">
     <tr>
-      <th>Number</th>
-      <th>HCP</th>
-      <th>Par</th>
+      <th><%=t 'holes.number' -%></th>
+      <th><%=t 'handicap.short' -%></th>
+      <th><%=t 'par' -%></th>
       <% %w{ black white yellow blue red }.each do |color| %>
       <th class="<%= color %>"></th>
       <% end %>
@@ -27,6 +27,6 @@
     <% end %>
   </table>
   <p>
-    <%= f.submit @course.new_record? ? 'Create' : 'Save' %>
+    <%= f.submit @course.new_record? ? t('actions.create') : t('actions.save') %>
   </p>
 <% end %>
