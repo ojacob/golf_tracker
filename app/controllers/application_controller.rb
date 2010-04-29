@@ -12,8 +12,14 @@ class ApplicationController < ActionController::Base
   
 private
   def authenticate
-      authenticate_or_request_with_http_basic do |id, password| 
-      id == ENV["HTTP_USER"] && password == ENV["HTTP_PASSWORD"]
+    return unless ENV["DENY_PUBLIC_ACCESS"]
+    
+    unless session[:user]
+      authenticate_or_request_with_http_basic do |id, password|
+        if (id == ENV["HTTP_USER"]) && (password == ENV["HTTP_PASSWORD"])
+          session[:user] = id
+        end
+      end
     end
   end
 end

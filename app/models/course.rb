@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100419201027
+# Schema version: 20100423151555
 #
 # Table name: courses
 #

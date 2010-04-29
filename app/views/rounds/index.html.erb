@@ -1,0 +1,7 @@
+<h1>My last five rounds</h1>
+
+<table>
+  <%= render :partial => "round_short", :collection => @rounds, :item => :round %>
+</table>
+
+<%= link_to "Track a new round", new_round_path %>

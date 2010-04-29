@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100422143334
+# Schema version: 20100423151555
 #
 # Table name: rounds
 #
@@ -15,4 +15,10 @@ class Round < ActiveRecord::Base
   belongs_to :course
   has_many :round_holes, :dependent => :destroy
   accepts_nested_attributes_for :round_holes
+  
+  validates_presence_of :course_id, :tee
+
+  def score
+    self.round_holes.sum(:score)
+  end
 end

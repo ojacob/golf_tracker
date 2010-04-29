@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100422143334
+# Schema version: 20100423151555
 #
 # Table name: round_holes
 #
@@ -16,4 +16,6 @@
 
 class RoundHole < ActiveRecord::Base
   belongs_to :round
+  
+  validates_presence_of :score
 end

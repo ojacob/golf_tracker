@@ -35,6 +35,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  include CoursesTest
+end
+
+class ActionController::IntegrationTest
+  include CoursesTest
 end
 
 Webrat.configure do |config|

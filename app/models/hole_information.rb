@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20100422143334
+# Schema version: 20100423151555
 #
 # Table name: hole_informations
 #

@@ -1,0 +1,45 @@
+<% form_for @round do |f| %>
+  <div class="error">
+    <%= f.error_messages -%>
+  </div>
+  <table>
+    <tr>
+      <td><%= f.label :course_id, t('rounds.course') -%></td>
+      <td>
+        <%= f.select :course_id, options_from_collection_for_select(Course.all, "id", "name"),
+                       :prompt => "Select course" -%>
+      </td>
+    </tr>
+    <tr>
+      <td><%= f.label :tee, t('rounds.tee') -%></td>
+      <td>
+        <%= f.select :tee, options_for_select(["Black", "White", "Yellow", "Blue", "Red"]),
+                       :prompt => "Select tees color" -%>
+      </td>
+    </tr>
+    <tr>
+      <td><%= f.label :played_on, t('rounds.date') -%></td>
+      <td><%= f.date_select :played_on, :start_year => 1990 -%></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table>
+          <tr>
+            <th>Number</th>
+            <th>Score</th>
+            <th>Fairway ?</th>
+            <th>Green ?</th>
+            <th>Sand save ?</th>
+            <th>Putts</th>
+          </tr>
+          <% f.fields_for :round_holes do |builder| %>
+            <%= render "round_hole", :f => builder %>
+          <% end %>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit "Save" -%></td>
+    </tr>
+  </table>
+<% end %>

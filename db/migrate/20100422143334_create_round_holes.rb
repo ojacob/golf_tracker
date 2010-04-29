@@ -1,7 +1,7 @@
 class CreateRoundHoles < ActiveRecord::Migration
   def self.up
     create_table :round_holes do |t|
-      t.integer :round_id
+      t.integer :round_id, :null => false
       t.integer :score
       t.boolean :fairway
       t.boolean :green
