@@ -21,4 +21,12 @@ class Round < ActiveRecord::Base
   def score
     self.round_holes.sum(:score)
   end
+  
+  def putts
+    self.round_holes.average(:putts)
+  end
+  
+  def fairways
+    (self.round_holes.collect { |rh| rh.fairway }.count / self.round_holes.count) / 100
+  end
 end

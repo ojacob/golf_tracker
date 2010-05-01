@@ -20,5 +20,13 @@ class RoundCreationTest < ActionController::IntegrationTest
     rounds_count = Round.count
     click_button 'round_submit'
     assert_equal rounds_count + 1, Round.count
+    
+    assert_contain "Détail du round"
+    
+    round = Round.find(:last)
+    assert 9, round.round_holes.collect { |rh| rh.fairway }.count
+    assert 72, round.score
+    assert 2, round.putts
+    assert 50, round.fairways
   end
 end
