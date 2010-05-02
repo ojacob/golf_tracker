@@ -5,10 +5,6 @@ class RoundsController < ApplicationController
   
   def show
     @round = Round.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.xml { render :xml => @round }
-    end
   end
   
   def new
@@ -20,15 +16,11 @@ class RoundsController < ApplicationController
   
   def create
     @round = Round.new(params[:round])
-    respond_to do |format|
-      if @round.save
-        flash[:notice] = "Congrats for this new round you played !"
-        format.html { redirect_to(@round) }
-        format.xml { render :xml => @round, :status => :created, :location => @round }
-      else
-        format.html { render :action => "new" }
-        format.xml { render :xml => @round.errors, :status => :unprocessable_entity }
-      end
+    if @round.save
+      flash[:notice] = "Congrats for this new round you played !"
+      redirect_to(@round)
+    else
+      render :action => "new"
     end
   end
 end
