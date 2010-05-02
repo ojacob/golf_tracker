@@ -1,0 +1,27 @@
+!!!5
+%html
+  %head
+    %title= h(yield(:title) || "Untitled")
+    = stylesheet_link_tag 'application', 'header', 'course-card'
+    = yield(:head)
+  %body>
+    #mygt-header
+      %h5#mygt-logo= link_to "My Golf Tracker", root_path
+      %ul#mygt-account-nav
+        %li= link_to t('menu.mystats')
+        %li= link_to t('menu.myrounds'), rounds_path
+        %li= link_to t('menu.myaccount')
+        %li= link_to t('menu.logout')
+      %ul#mygt-section-nav
+        %li= link_to t('menu.pricing')
+        %li= link_to t('menu.links')
+        %li= link_to t('menu.faq')
+    #content
+      - if flash[:error]
+        .error.notice
+          %h3=h flash[:error]
+      - if flash[:notice]
+        .notice
+          %h3=h flash[:notice]
+      
+      = yield

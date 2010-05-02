@@ -1,0 +1,30 @@
+- form_for(@course) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :name, t('courses.name')
+    %br/
+    = f.text_field :name
+
+  %p
+    = f.label :par, t('par')
+    %br/
+    = f.text_field :par, :size => 2, :maxsize => 2
+  
+  %p
+    = f.label :description, t('courses.description')
+    %br/
+    = f.text_field :description
+  
+  %table.course-card
+    %tr
+      %th=t 'holes.number'
+      %th=t 'handicap.short'
+      %th=t 'par'
+      - %w{ black white yellow blue red }.each do |color|
+        %th{:class => color}
+
+    - f.fields_for :holes do |builder|
+      = render "course_hole", :f => builder
+
+  %p= f.submit @course.new_record? ? t('actions.create') : t('actions.save')

@@ -1,0 +1,10 @@
+%tr.hole-positions
+  %td= f.object.position
+  %td.hole-handicap-cell
+    = f.hidden_field :position
+    = f.text_field :handicap, :id => "hole_#{f.object.position}_handicap", :size => "5"
+  %td.hole-par-cell
+    = f.text_field :par, :id => "hole_#{f.object.position}_par", :size => "5"
+
+  - f.fields_for :hole_informations do |builder|
+    = render "hole_info", :f => builder, :pos => f.object.position

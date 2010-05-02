@@ -1,0 +1,13 @@
+%h1=t 'courses.list'
+
+%table
+  %tr
+    %th=t 'courses.name'
+    %th=t 'par'
+    %th=t 'courses.description'
+
+  - @courses.each do |course|
+    %tr
+      %td= link_to h(course.name), course
+      %td=h course.par
+      %td=h course.description
