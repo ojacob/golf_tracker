@@ -1,0 +1,251 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #626938;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #282b16;
+}
+
+*
+{
+border: 0;
+margin: 0;
+}
+
+body
+{
+
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+	background: url(images/bg.jpg);
+	background-repeat:repeat-x;
+	background-position: top;
+	background-color: #2e3c16;
+}
+
+#mainbg{
+	background: url(images/main_bg.png);
+	background-repeat:repeat-y;
+	background-position: center;
+}
+
+#main{
+	margin: 0 auto;
+	width: 1014px;
+}
+
+#header{
+	width: 1014px;
+	margin: 0 auto;
+	height: 234px;
+	background: url(images/header.jpg) no-repeat top;
+}
+
+#logo{
+	text-align: left;
+	height: 55px;
+	padding-left: 180px;
+	padding-top: 23px;
+	background: url(images/logo.jpg);
+	background-repeat: no-repeat;
+	background-position:top left;
+}
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+
+#logo H2 a{
+	font-size: 10px;
+}
+
+#buttons{
+	height: 77px;
+	margin: 0 auto;
+	background: url(images/menubg.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+#buttons ul {
+    padding-left: 0px;
+}
+
+#buttons li {
+	display: inline;
+}
+
+#buttons a {
+	font-family: Tahoma, Geneva, Verdana;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
+	float: left;
+	width: 20%;
+	height: 47px;
+	padding-top: 30px;
+}
+
+#buttons a:hover {
+	height: 47px;
+	background: url(images/menubghov.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+#content{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#content_bg{
+	background: url(images/contentbg.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	background-color: #f3f5e9;
+}
+
+#left{
+	width: 709px;
+	margin-left: 15px;
+}
+
+#left p{
+	padding-left:5px;
+	padding-right:5px;
+}
+
+#text{
+}
+
+
+#left H1{
+	font-family: Tahoma, Geneva, Verdana;
+	font-weight:normal;
+	color: #ffffff;
+	font-size: 18px;
+	height: 35px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	width:100%;
+	margin-bottom:20px;
+	background: url(images/title_left.jpg);
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+
+.read, #right ul .read{
+	text-align: right;
+	background: url(images/read.jpg);
+	background-repeat:no-repeat;
+	background-position:right;
+	margin-top:10px;
+	margin-bottom:10px;
+	height:16px;
+}
+
+.read a, #right ul li .read a{
+	color: #ffffff;
+	font-weight:normal;
+	padding-right:4px;
+	font-size: 12px;
+	text-decoration:none;
+}
+
+.read a:hover, #right ul .read a:hover{
+	text-decoration:underline;
+}
+
+#right{
+	width: 262px;
+	float:right;
+	margin-right: 15px;
+}
+
+#right h2 {
+	font-family: Tahoma, Geneva, Verdana;
+	font-weight:normal;
+	color: #ffffff;
+	font-size: 18px;
+	text-align:center;
+	height: 35px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-bottom:20px;
+	background: url(images/title_right.jpg);
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+
+#right ul{
+	list-style: none;
+	margin-bottom: 30px;
+	padding-left:7px;
+	padding-top: 5px;
+	padding-right:10px;
+}
+
+
+
+#right li{
+	background: url(images/ls.png) no-repeat left top;
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+
+#right a{
+	text-decoration: none;
+	color: #335000;
+	font-weight:bold;
+}
+
+#right a:hover {
+	text-decoration: underline;
+}
+
+#footer
+{
+	background: url(images/footer.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	height: 50px;
+	margin: 0 auto;
+	font-size: 10px;
+	color: #ffffff;
+	padding-top: 30px;
+	text-align: center;
+	clear:both;
+	padding-bottom: 5px;
+}
+
+#footer a{
+	color: #ffffff;
+	font-size: 10px;
+	text-decoration: none;
+}
+.padding{
+	padding: 10px;
+	color:#FF0000;
+	font-weight: bold;
+}

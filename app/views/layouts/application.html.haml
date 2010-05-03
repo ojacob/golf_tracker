@@ -1,27 +1,62 @@
 !!!5
-%html
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %title= h(yield(:title) || "Untitled")
-    = stylesheet_link_tag 'application', 'header', 'course-card'
-    = yield(:head)
-  %body>
-    #mygt-header
-      %h5#mygt-logo= link_to "My Golf Tracker", root_path
-      %ul#mygt-account-nav
-        %li= link_to t('menu.mystats')
-        %li= link_to t('menu.myrounds'), rounds_path
-        %li= link_to t('menu.myaccount')
-        %li= link_to t('menu.logout')
-      %ul#mygt-section-nav
-        %li= link_to t('menu.pricing')
-        %li= link_to t('menu.links')
-        %li= link_to t('menu.faq')
-    #content
-      - if flash[:error]
-        .error.notice
-          %h3=h flash[:error]
-      - if flash[:notice]
-        .notice
-          %h3=h flash[:notice]
-      
-      = yield
+    %meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    %title MyGolfTracker :: Simple Golf score tracking system
+    %meta{:name => "keywords", :content => ""}
+    %meta{:name => "description", :content => ""}
+    = stylesheet_link_tag "styles", "course-card"
+  %body
+    #mainbg
+      #main
+        <!-- header begins -->
+        #logo
+          = link_to "My Golf Tracker", root_path
+          %h2= link_to "Simple Golf score and performance tracking system", root_path, :id => "metamorph"
+  
+        #header &nbsp;
+        #buttons
+          %ul
+          %li.first= link_to "Home", root_path
+          %li= link_to "Courses", courses_path
+          %li= link_to "Rounds", rounds_path
+          %li= link_to "Stats", root_path
+          %li= link_to "Contact", root_path
+        <!-- header ends -->
+        <!-- content begins -->
+        #content_bg
+          #content
+            /
+              -# Right column content example
+              #right
+                %h2 Lorem ipsum dolor
+                %ul
+                  %li
+                    = link_to "Maecenas sed lorem neque. Mauris dictum varius orci, sagittis auctor sapien sagittis vitae.", root_path
+                    %br
+                    %br
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    .read= link_to "read more", root_path
+                  %li
+                    = link_to "Maecenas sed lorem neque. Mauris dictum varius orci, sagittis auctor sapien sagittis vitae.", root_path
+                    %br
+                    %br
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    .read= link_to "read more", root_path
+            #left
+              #text
+                - if flash[:error]
+                  .error.notice
+                    %h3=h flash[:error]
+                - if flash[:notice]
+                  .notice
+                    %h3=h flash[:notice]
+                = yield
+
+        <!-- content ends -->
+        <!-- footer begins -->
+        #footer
+          %p
+            Copyright 2009. Designed by 
+            = link_to "Flash Templates", "http://www.metamorphozis.com/"
+        <!-- footer ends -->
