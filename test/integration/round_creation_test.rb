@@ -25,7 +25,7 @@ class RoundCreationTest < ActionController::IntegrationTest
     
     round = Round.find(:last)
     assert_equal 72, round.score
-    assert_equal 2, round.putts
-    assert_in_delta 66.66, round.fairways, 0.01
+    assert_equal 36, round.putts
+    assert_in_delta 66.66, round.fairways_avg, 0.01
   end
 end

@@ -1,5 +1,9 @@
 en:
   rounds:
-    course: Round played on
+    course: Course
     tee: Tees
     date: Played on
+    score: Score
+    fairways: Fairways
+    greens: Greens in regulation
+    putts: Number of putts
