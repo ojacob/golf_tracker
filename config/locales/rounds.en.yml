@@ -6,4 +6,5 @@ en:
     score: Score
     fairways: Fairways
     greens: Greens in regulation
-    putts: Number of putts
+    putts: Putts
+    averages: Averages

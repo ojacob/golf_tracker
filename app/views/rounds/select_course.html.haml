@@ -1,0 +1,6 @@
+- form_for @round do |f|
+  #course-selection
+    = f.hidden_field :step, :value => "course-selection"
+    = f.label :course_id, t('rounds.course')
+    = f.select :course_id, options_from_collection_for_select(Course.all, "id", "name"), :prompt => "Select course"
+    = f.submit "Next >"
