@@ -1,6 +1,6 @@
 class RoundsController < ApplicationController
   def index
-    @rounds = Round.find_all_by_state("score-entered", :limit => 5)
+    @rounds = Round.find_all_by_current_state("done", :limit => 5)
   end
   
   def show

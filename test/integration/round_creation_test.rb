@@ -6,9 +6,18 @@ class RoundCreationTest < ActionController::IntegrationTest
   end
 
   test 'enter a round score card' do
+    rounds_count = Round.count
+    
     visit new_round_path
     
+    # Round is created directly to start the state machine
+    assert_equal rounds_count + 1, Round.count
+    
+    # First screen
     select @course.name, :from => "round_course_id"
+    click_button "round_submit"
+    
+    # Second screen
     select "Yellow", :from => "round_tee"
     
     18.times do |i|
@@ -17,9 +26,7 @@ class RoundCreationTest < ActionController::IntegrationTest
       check "round_round_holes_attributes_#{i}_fairway" unless (i % 3 == 0)
     end
     
-    rounds_count = Round.count
-    click_button 'round_submit'
-    assert_equal rounds_count + 1, Round.count
+    click_button "round_submit"
     
     assert_contain "Détail du round"
     
