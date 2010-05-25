@@ -1,6 +1,14 @@
 - form_for @round do |f|
   #course-selection
+    .error
+      = f.error_messages
     = f.hidden_field :step, :value => "course-selection"
-    = f.label :course_id, t('rounds.course')
-    = f.select :course_id, options_from_collection_for_select(Course.all, "id", "name"), :prompt => "Select course"
-    = f.submit "Next >"
+    %table
+      %tr
+        %td= f.label :course_id, t('rounds.course')
+        %td= f.select :course_id, options_from_collection_for_select(Course.all, "id", "name"), :prompt => "Select course"
+      %tr
+        %td= f.label :played_on, t('rounds.date')
+        %td= f.text_field :played_on
+      %tr
+        %td{:colspan => 2}= f.submit "Next >"

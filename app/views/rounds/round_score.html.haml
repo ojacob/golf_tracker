@@ -9,9 +9,6 @@
       %td= f.label :tee, t('rounds.tee')
       %td= f.select :tee, options_for_select(["Black", "White", "Yellow", "Blue", "Red"]), :prompt => "Select tees color"
     %tr
-      %td= f.label :played_on, t('rounds.date')
-      %td= f.text_field :played_on
-    %tr
       %td{:colspan => 2}
         %table
           %tr

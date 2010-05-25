@@ -1,6 +1,6 @@
 class RoundsController < ApplicationController
   def index
-    @rounds = Round.find_all_by_current_state("done", :limit => 5)
+    @rounds = Round.find_all_by_current_state("done", :limit => 5, :order => "played_on DESC")
   end
   
   def show
@@ -24,10 +24,10 @@ class RoundsController < ApplicationController
     
     if @round.created? && step == "course-selection"
       course = Course.find(params[:round][:course_id])
-      @round.course_id = course.id
-      @round.select_course! # AASM event
       
-      if @round.save
+      @round.update_attributes(params[:round])
+      
+      if @round.select_course! && @round.save
         course.holes.each do |h|
           @round.round_holes.build
         end
@@ -37,8 +37,7 @@ class RoundsController < ApplicationController
         render :action => "select_course"
       end
     elsif @round.course_selected? && step == "score-card"
-      if @round.update_attributes(params[:round])
-        @round.score_entered! # AASM event
+      if @round.update_attributes(params[:round]) && @round.score_entered!
         redirect_to round_url(@round)
       else
         render :action => "round_score"

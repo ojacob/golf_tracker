@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    attributes:
+      round:
+        played_on: Round played on
+    errors:
+      template:
+        header:
+          one: "1 error prevents you from submitting the form"
+          other: "{{count}} errors prevent you from submitting the form"
+        body: "The following fields are not correctly filled : "
+      models:
+        round:
+          attributes:
+            played_on:
+              blank: must be filled in
+              empty: must be filled in

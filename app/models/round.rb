@@ -17,7 +17,7 @@ class Round < ActiveRecord::Base
   belongs_to :course
   has_many :round_holes, :dependent => :destroy
   accepts_nested_attributes_for :round_holes
-
+  
   ####################
   # AASM definitions
   ####################
@@ -29,12 +29,17 @@ class Round < ActiveRecord::Base
   aasm_state :course_selected # Course on which the round has been played has been selected
   aasm_state :done # User entered his score for this round
   
-  aasm_event :select_course do
-    transitions :to => :course_selected, :from => [:created]
+  aasm_event :select_course, :before => :validate_course do
+    transitions :to => :course_selected, :from => [:created], :guard => Proc.new { |o| o.errors.empty? }
   end
   
   aasm_event :score_entered do
     transitions :to => :done, :from => [:course_selected]
+  end
+
+  def validate_course
+    self.errors.add(:course_id, :blank, :default => nil) if self.course_id.blank?
+    self.errors.add(:played_on, :blank, :default => nil) if self.played_on.blank?
   end
 
   #########

@@ -15,6 +15,8 @@ class RoundCreationTest < ActionController::IntegrationTest
     
     # First screen
     select @course.name, :from => "round_course_id"
+    fill_in :round_played_on, :with => Time.now.strftime('%d %B %Y')
+    
     click_button "round_submit"
     
     # Second screen
@@ -34,5 +36,14 @@ class RoundCreationTest < ActionController::IntegrationTest
     assert_equal 72, round.score
     assert_equal 36, round.putts
     assert_in_delta 66.66, round.fairways_avg, 0.01
+  end
+  
+  test 'cannot enter score without course and date' do
+    visit new_round_path
+    
+    select @course.name, :from => "round_course_id"
+    click_button "round_submit"
+    
+    assert_contain "Round played on must be filled in"
   end
 end

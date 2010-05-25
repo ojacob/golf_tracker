@@ -1,0 +1,17 @@
+fr:
+  activerecord:
+    attributes:
+      round:
+        plyaed_on: Date de la partie
+    errors:
+      template:
+        header:
+          one: "1 erreur vous empêche de valider le formulaire"
+          other: "{{count}} erreurs vous empêchent de valider le formulaire"
+        body: "Les champs suivants ne sont pas correctement remplis : "
+      models:
+        round:
+          attributes:
+            played_on:
+              blank: doit être renseignée
+              empty: doit être renseignée
