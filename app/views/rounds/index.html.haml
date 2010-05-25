@@ -2,8 +2,8 @@
 
 - if @rounds.empty?
   =t "rounds.last.none"
-  %br
 - else
   = render(:partial => "last_rounds")
 
-= link_to "Track a new round", new_round_path
+#actions
+  = link_to "Track a new round", new_round_path
