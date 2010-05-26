@@ -16,12 +16,11 @@ class RoundCreationTest < ActionController::IntegrationTest
     # First screen
     select @course.name, :from => "round_course_id"
     fill_in :round_played_on, :with => Time.now.strftime('%d %B %Y')
+    select "Yellow", :from => "round_tee"
     
     click_button "round_submit"
     
     # Second screen
-    select "Yellow", :from => "round_tee"
-    
     18.times do |i|
       fill_in "round_round_holes_attributes_#{i}_score", :with => 4
       fill_in "round_round_holes_attributes_#{i}_putts", :with => 2
