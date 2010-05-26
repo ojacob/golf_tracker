@@ -1,6 +1,6 @@
-%table.course-card{:border => "1", :width => "100%"}
+%table.course-card{:border => "0", :width => "100%"}
   %tr.hole-positions
-    %th &nbsp;
+    %th=t 'hole'
     - @course.holes.each do |hole|
       %th=h hole.position
   %tr

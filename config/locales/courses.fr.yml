@@ -1,4 +1,4 @@
-en:
+fr:
   par: Par
   handicap:
     short: HCP
@@ -10,5 +10,6 @@ en:
     identification: Fiche du parcours
     card:
       title: Carte de score
+  hole: Trou
   holes:
     number: Numéro

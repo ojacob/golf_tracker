@@ -9,3 +9,35 @@
 *.center {
 	text-align: center;
 }
+
+
+/**************
+ * Courses
+ *************/
+
+#courses .course {
+	margin-bottom: 5px;
+}
+
+#courses .course {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.course-header {
+	display: block;
+	line-height: 25px;
+}
+
+.course-header .name {
+	display: inline;
+}
+
+.course-header .par {
+	display: inline;
+	float: right;
+}
+
+.course-body {
+	line-height: 100px;
+}

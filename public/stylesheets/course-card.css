@@ -1,5 +1,10 @@
 .course-card {
-	
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+
+.course-card tr {
+	line-height: 25px;
 }
 
 .hole-positions {

@@ -1,21 +1,8 @@
 #course-summary
-  %fieldset
-    %legend=t 'courses.identification'
-    %p
-      %b=t 'courses.name'
-      \:
-      =h @course.name
-    %p
-      %b=t 'par'
-      \:
-      =h @course.par
-    %p
-      %b=t 'courses.description'
-      \:
-      =h @course.description
+  %h1= "#{@course.name} - Par #{@course.par}"
+  =h @course.description
 
 #course-card
-  %h2=t 'courses.card.title'
   = render :partial => "course", :object => @course
 
 = link_to t('actions.back'), courses_path

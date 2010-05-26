@@ -10,6 +10,7 @@ en:
     identification: Course identification
     card:
       title: Score card
+  hole: Hole
   holes:
     number: Number
       
