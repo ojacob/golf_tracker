@@ -6,13 +6,12 @@
 
   %table
     %tr
-      %td= f.label :tee, t('rounds.tee')
-      %td= f.select :tee, options_for_select(["Black", "White", "Yellow", "Blue", "Red"]), :prompt => "Select tees color"
-    %tr
       %td{:colspan => 2}
         %table
           %tr
             %th Position
+            %th Distance
+            %th Par
             %th Score
             %th Fairway ?
             %th Green ?

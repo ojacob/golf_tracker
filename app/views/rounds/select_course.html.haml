@@ -8,6 +8,9 @@
         %td= f.label :course_id, t('rounds.course')
         %td= f.select :course_id, options_from_collection_for_select(Course.all, "id", "name"), :prompt => "Select course"
       %tr
+        %td= f.label :tee, t('rounds.tee')
+        %td= f.select :tee, options_for_select(["Black", "White", "Yellow", "Blue", "Red"]), :prompt => "Select tees color"
+      %tr
         %td= f.label :played_on, t('rounds.date')
         %td= f.text_field :played_on
       %tr

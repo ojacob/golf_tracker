@@ -21,6 +21,6 @@ class Hole < ActiveRecord::Base
   accepts_nested_attributes_for :hole_informations
   
   def info(color)
-    self.hole_informations.detect { |info| info.color == color }
+    self.hole_informations.detect { |info| info.color == color.downcase }
   end
 end
