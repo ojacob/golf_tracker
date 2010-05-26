@@ -1,3 +1,7 @@
+########################
+# Create some courses
+########################
+
 names = ["L'aigle", "L'albatros", "Paris International Golf Club"]
 pars = [4, 4, 4, 3, 4, 3, 5, 4, 4, 3, 4, 4, 3, 4, 5, 4, 5, 4]
 handicaps = [12, 2, 18, 16, 6, 14, 10, 8, 4, 9, 11, 1, 17, 5, 15, 3, 13, 7]
@@ -21,4 +25,31 @@ names.each do |name|
   end
 
   course.save!
+end
+
+##########################
+# Enter some results
+##########################
+
+["L'aigle", "Paris International Golf Club"].each do |course_name|
+  course = Course.find_by_name(course_name)
+  round = Round.create
+  round.course_id = course.id
+  round.played_on = Time.now.strftime('%B %d %Y')
+  round.save
+  round.select_course!
+  
+  round.tee = "Yellow"
+  course.holes.each do |hole|
+    rh = round.round_holes.build
+    rh.position = hole.position
+    rh.score = 4
+    rh.fairway = true
+    rh.green = true
+    rh.sandsave = false
+    rh.putts = 2
+  end
+
+  round.save
+  round.score_entered!
 end

@@ -29,7 +29,7 @@ class RoundsController < ApplicationController
       
       if @round.select_course! && @round.save
         course.holes.each do |h|
-          @round.round_holes.build
+          @round.round_holes.build(:position => h.position)
         end
       
         render :action => "round_score"
