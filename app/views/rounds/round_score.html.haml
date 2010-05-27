@@ -9,14 +9,14 @@
       %td{:colspan => 2}
         %table
           %tr
-            %th Position
-            %th Distance
-            %th Par
-            %th Score
-            %th Fairway ?
-            %th Green ?
-            %th Sand save ?
-            %th Putts
+            %th=t 'rounds.hole.position'
+            %th=t 'rounds.hole.distance'
+            %th=t 'rounds.hole.par'
+            %th=t 'rounds.hole.score'
+            %th=t 'rounds.hole.fairway'
+            %th=t 'rounds.hole.green'
+            %th=t 'rounds.hole.sandsave'
+            %th=t 'rounds.hole.putts'
           - f.fields_for :round_holes do |builder|
             = render "round_hole", :f => builder
     %tr

@@ -9,5 +9,16 @@ fr:
     putts: Putts
     averages: Moyennes
     detail: "{{course_name}}, joué le {{played_on}}"
+    new: Ajouter un nouveau score
     last:
-      none: Vous n'avez encore jamais entré de résultat
+      mylast5: Mes 5 derniers parcours
+      none: Vous n'avez encore jamais entré de résultat 
+    hole:
+      position: Position
+      distance: Distance
+      par: Par
+      score: Score
+      fairway: Fairway ?
+      green: Green ?
+      sandsave: Bunker ?
+      putts: Putts

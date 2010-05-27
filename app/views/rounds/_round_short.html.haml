@@ -1,5 +1,5 @@
 %tr
-  %td.left= round_short.played_on.strftime('%d %B %Y')
+  %td.left= I18n.localize(round_short.played_on.to_date, :format => :long)
   %td.left= link_to round_short.course.name, round_short
   %td.left= round_short.tee
   %td.center= round_short.score

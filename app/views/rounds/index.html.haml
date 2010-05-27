@@ -1,4 +1,4 @@
-%h1 My last five rounds
+%h1=t 'rounds.last.mylast5'
 
 - if @rounds.empty?
   =t "rounds.last.none"
@@ -6,4 +6,4 @@
   = render(:partial => "last_rounds")
 
 #actions
-  = link_to "Track a new round", new_round_path
+  = link_to I18n.t('rounds.new'), new_round_path

@@ -9,5 +9,16 @@ en:
     putts: Putts
     averages: Averages
     detail: "{{course_name}}, played on {{played_on}}"
+    new: Add a new round
     last:
+      mylast5: My last 5 five rounds
       none: You have not entered a result yet !
+    hole:
+      position: Position
+      distance: Distance
+      par: Par
+      score: Score
+      fairway: Fairway ?
+      green: Green ?
+      sandsave: Sand save ?
+      putts: Putts
