@@ -1,5 +1,7 @@
 %tr{:class => "center"}
-  %td= f.object.position
+  %td
+    = f.object.position
+    = f.hidden_field :position
   = round_hole_information(f.object)
   %td= f.text_field :score, :size => 4
   %td= f.check_box :fairway

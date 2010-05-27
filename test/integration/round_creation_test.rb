@@ -29,7 +29,7 @@ class RoundCreationTest < ActionController::IntegrationTest
     
     click_button "round_submit"
     
-    assert_contain "Détail du round"
+    assert_contain "L'albatros - Golf National de France, played on #{I18n.localize(Time.now.to_date, :format => :long)}"
     
     round = Round.find(:last)
     assert_equal 72, round.score
