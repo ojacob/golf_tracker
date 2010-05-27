@@ -8,5 +8,6 @@ fr:
     greens: Greens en régulation
     putts: Putts
     averages: Moyennes
+    detail: "{{course_name}}, joué le {{played_on}}"
     last:
       none: Vous n'avez encore jamais entré de résultat

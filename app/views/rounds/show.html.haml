@@ -1,1 +1,24 @@
-%h1 Détail du round
+%h1=t("rounds.detail", :course_name => @round.course.name, :played_on => I18n.localize(@round.played_on.to_date, :format => :long))
+
+%table
+  %tr
+    %td{:colspan => 2}
+      %table
+        %tr
+          %th Position
+          %th Distance
+          %th Par
+          %th Score
+          %th Fairway ?
+          %th Green ?
+          %th Sand save ?
+          %th Putts
+        - @round.round_holes.each do |hole|
+          %tr
+            %td= hole.position
+            = round_hole_information(hole)
+            %td= hole.score
+            %td= hole.fairway? ? I18n.t('oui') : I18n.t('non')
+            %td= hole.green? ? I18n.t('oui') : I18n.t('non')
+            %td= hole.sandsave? ? I18n.t('oui') : I18n.t('non')
+            %td= hole.putts

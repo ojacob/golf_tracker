@@ -1,4 +1,6 @@
 fr:
+  oui: Oui
+  non: Non
   actions:
     back: Retour
     create: Créer
@@ -8,7 +10,17 @@ fr:
     pricing: Tarifs
     links: Liens
     faq: FAQ
-    myrounds: Mes parcours
-    mystats: Mes stats
-    myaccount: Mon profil
+    home: Accueil
+    courses: Parcours
+    rounds: Scores
+    stats: Stats
+    account: Mon profil
     logout: Deconnexion
+  date:
+    formats:
+      long: '%d %B %Y'
+    day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
+    abbr_day_names: [Dim, Lun, Mar, Mer, Jeu, Ven, Sam]
+    month_names: [~, Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
+    abbr_month_names: [~, Jan, Fev, Mar, Avr, Mai, Juin, Juil, Aou, Sep, Oct, Nov, Dec]
+    order: [:day, :month, :year]

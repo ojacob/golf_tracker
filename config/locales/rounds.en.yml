@@ -8,5 +8,6 @@ en:
     greens: Greens in regulation
     putts: Putts
     averages: Averages
+    detail: "{{course_name}}, played on {{played_on}}"
     last:
       none: You have not entered a result yet !
