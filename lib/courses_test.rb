@@ -14,7 +14,7 @@ module CoursesTest
       :name => "L'albatros - Golf National de France",
       :description => "Le parcours le plus exigeant, rendez-vous des plus grands pour l'Open de France",
       :address => "Golf National de France - 2 avenue du Golf - 78280 Guyancourt",
-      :par => 72
+      :par => 71
     }
 
     course = Course.create(params)
@@ -27,5 +27,24 @@ module CoursesTest
       end
     end
     return course
+  end
+  
+  def add_round(course)
+    round = Round.create
+    round.course_id = course.id
+    round.tee = "Yellow"
+    round.played_on = Time.now.strftime('%B %d %Y')
+    round.save!
+    round.select_course!
+    
+    round.round_holes.each do |rh|
+      rh.score = course.holes[rh.position - 1].par + 2
+      rh.putts = 2
+      rh.fairway = true
+      rh.sandsave = false
+      rh.green = false
+    end
+    
+    round.score_entered! && round.save!
   end
 end

@@ -1,3 +1,4 @@
 fr:
   stats:
     title: Mes statistiques
+    avgscore: Score moyen {{score}}

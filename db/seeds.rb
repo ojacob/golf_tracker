@@ -14,7 +14,7 @@ distances = {
 }
 
 names.each do |name|
-  course = Course.new(:name => name, :par => 72)
+  course = Course.new(:name => name, :par => 71)
   course.description = "One of the most outstanding golf course in the entire world !! Playing this course is always a real pleasure."
   pars.each_with_index do |par, i|
     course.holes.build(:par => par, :position => i+1, :handicap => handicaps[i])

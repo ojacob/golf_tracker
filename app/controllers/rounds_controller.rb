@@ -24,14 +24,10 @@ class RoundsController < ApplicationController
     
     if @round.created? && step == "course-selection"
       course = Course.find(params[:round][:course_id])
-      
       @round.update_attributes(params[:round])
       
-      if @round.select_course! && @round.save
-        course.holes.each do |h|
-          @round.round_holes.build(:position => h.position)
-        end
-      
+      # Avoid validation on save to allow Round to create empty RoundHoles for the next screen
+      if @round.select_course! && @round.save(false)
         render :action => "round_score"
       else
         render :action => "select_course"

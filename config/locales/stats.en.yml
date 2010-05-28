@@ -1,3 +1,4 @@
 en:
   stats:
     title: My statistics
+    avgscore: Average score {{score}}

@@ -17,5 +17,6 @@
 class RoundHole < ActiveRecord::Base
   belongs_to :round
   
-  validates_presence_of :score
+  validates_numericality_of :score
+  validates_numericality_of :putts
 end
